@@ -10,9 +10,23 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var companyNameLabel: UILabel!
     
+    @IBOutlet weak var symbolLabel: UILabel!
     
+    @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var priceChangeLabel: UILabel!
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var logoLoadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    // MARK: - companies init
+    private var companies: [(name: String, symbol: String)] = [("...", "...")]
+    // MARK: - cashed images init
+    private var cachedImages: [String: UIImage] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
